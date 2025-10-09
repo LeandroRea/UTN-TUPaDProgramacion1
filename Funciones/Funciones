@@ -1,0 +1,104 @@
+
+#Actividad 1
+
+print("Hola Mundo!")
+
+#Actividad 2
+
+nombre= input ("Como te llamas? ")
+print(f"Hola "+ nombre + ", mucho gusto.")
+
+#Actividad 3
+
+def informacion_personal(nombre, apellido, edad, residencia):
+    print("Soy", nombre, apellido + ", tengo", edad, "años y vivo en", residencia)
+
+nombre = input("Nombre: ")
+apellido = input("Apellido: ")
+edad = input("Edad: ")
+residencia = input("Residencia: ")
+
+informacion_personal(nombre, apellido, edad, residencia)
+
+#Actividad 4
+
+def calcular_area_circulo(radio):
+    return 3.14 * radio ** 2
+
+def calcular_perimetro_circulo(radio):
+    return 2 * 3.14 * radio
+
+radio = float(input("Ingresa el radio del círculo: "))
+
+print("Área del círculo:", round(calcular_area_circulo(radio), 2))
+print("Perímetro del círculo:", round(calcular_perimetro_circulo(radio), 2))
+
+#Actividad 5
+
+def segundos_a_horas(segundos):
+    return segundos / 3600
+
+segundos = int(input("Ingresa los segundos: "))
+horas = segundos_a_horas(segundos)
+print("Equivale a", horas, "horas")
+
+#Actividad 6 
+
+numero= int(input("Ingrese un numero: "))
+
+for i in range (11):
+    resultado = numero * i
+
+    print(f"{numero} x {i} = {resultado}")
+
+#Actividad 7
+
+def operaciones_basicas(a, b):
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    division = a / b
+    return (suma, resta, multiplicacion, division)
+
+
+a = float(input("Ingresa el primer número: "))
+b = float(input("Ingresa el segundo número: "))
+
+resultados = operaciones_basicas(a, b)
+
+print("Suma:", resultados[0])
+print("Resta:", resultados[1])
+print("Multiplicación:", resultados[2])
+print("División:", resultados[3])
+
+#Actividad 8
+
+def calcular_imc(peso, altura):
+    return peso/ ( altura ** 2)
+
+peso = float(input("Ingresa tu peso en kilogramos: "))
+altura = float(input("Ingresa tu altura en metros: "))
+
+imc = calcular_imc(peso, altura)
+print("Tu IMC es:", round(imc, 2))
+
+#Actividad 9
+
+def celsius_a_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+celsius = float(input("Ingresa la temperatura en Celsius: "))
+fahrenheit = celsius_a_fahrenheit(celsius)
+print(f"{celsius} es equivalente a {fahrenheit:.2f} ")
+
+#Actividad 10
+
+def calcular_promedio(a, b, c):
+    return (a + b + c) / 3
+
+a = float(input("Ingresa el primer número: "))
+b = float(input("Ingresa el segundo número: "))
+c = float(input("Ingresa el tercer número: "))
+
+promedio = calcular_promedio(a, b, c)
+print("El promedio es:", round(promedio, 2))
